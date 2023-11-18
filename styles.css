@@ -1,0 +1,35 @@
+body {
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+}
+.container { 
+    display:grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.grid-item {
+    border: 2px solid green;
+    font-size: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.remove-top-border { 
+    border-top: 0;
+}
+.remove-left-border { 
+    border-left: 0;
+}
+.remove-right-border { 
+    border-right: 0;
+}
+.remove-bottom-border { 
+    border-bottom: 0;
+}
