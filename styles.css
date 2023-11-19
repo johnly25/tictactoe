@@ -3,11 +3,21 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    width: auto;
+
 }
-.container { 
-    display:grid;
+
+.main-container {
+    display: grid;
+    min-height: 100%;
+    grid-template-rows: min-content min-content auto;
+    gap: 30px;
+}
+
+.container {
+    display: grid;
     grid-template-columns: repeat(3, 150px);
     grid-template-rows: repeat(3, 150px);
 }
@@ -21,15 +31,34 @@ body {
     font-family: 'DM Sans', sans-serif;
 }
 
-.remove-top-border { 
+.remove-top-border {
     border-top: 0;
 }
-.remove-left-border { 
+
+.remove-left-border {
     border-left: 0;
 }
-.remove-right-border { 
+
+.remove-right-border {
     border-right: 0;
 }
-.remove-bottom-border { 
+
+.remove-bottom-border {
     border-bottom: 0;
 }
+
+.status {
+    font-size: 25px;
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    font-size: 70px;
+    font-family: 'Schoolbell', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
