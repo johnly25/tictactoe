@@ -104,6 +104,8 @@ const displayController = (function () {
         mainContainer.appendChild(container);
         document.body.append(mainContainer);
         getInput();
+        addRestart();
+
     }
 
     const getInput = function () {
@@ -198,9 +200,8 @@ const displayController = (function () {
     }
 
     const restartHandler = function () {
-        let restart = document.querySelector(".restart");
+        let restart = document.querySelector(".restart-btn");
         restart.addEventListener("click", () => {
-            console.log("hello")
             game.restart();
             document.body.textContent ="";
             setUpGame();
@@ -208,11 +209,12 @@ const displayController = (function () {
     }
 
     const addRestart = function () {
-        let restart = document.querySelector(".restart");
+        let restart = document.querySelector(".restart-btn");
         if (!restart) {
             let div = document.createElement('div')
             let restart = document.createElement('button');
-            restart.classList.add('restart');
+            restart.classList.add('restart-btn');
+            div.classList.add('button-container')
             restart.textContent = 'restart';
             div.append(restart);
             let mainContainer = document.querySelector('.main-container');
